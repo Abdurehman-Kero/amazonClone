@@ -3,11 +3,11 @@ import Category from "./Catergory";
 function CategoryCard({info}) {
   return (
     <div className={classes.category}>
-      <a href={`/category/${info.name}`}>
+      <a href={`/category/${info?.name}`}>
         <span>
-          <h2>{info.title}</h2>
+          <h2>{info?.title}</h2>
         </span>
-        <img src={info.imgLink} alt="" />
+        <img src={info?.imgLink} alt="" />
         <p>shop now</p>
       </a>
     </div>
