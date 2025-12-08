@@ -5,12 +5,14 @@ import './App.css'
 import Header from './Components/Header/Header'
 import Carouse from './Components/Carousel/Carousel'
 import CarouselEffect from './Components/Carousel/Carousel'
+import CategoryCard from './Components/Category/CategoryCard'
 
 function App() { 
   return (
     <>
        <Header/>
        <CarouselEffect />
+       <CategoryCard/>
     </>
   )
 }
