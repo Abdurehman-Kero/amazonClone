@@ -7,6 +7,7 @@ import Carouse from './Components/Carousel/Carousel'
 import CarouselEffect from './Components/Carousel/Carousel'
 import CategoryCard from './Components/Category/CategoryCard'
 import Category from './Components/Category/Catergory'
+import Product from './Components/Product/Product'
 
 function App() { 
   return (
@@ -14,6 +15,7 @@ function App() {
        <Header/>
        <CarouselEffect />
        <Category/> 
+       <Product/>
     </>
   )
 }
