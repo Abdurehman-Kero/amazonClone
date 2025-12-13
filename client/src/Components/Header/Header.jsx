@@ -1,12 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
 import { BiCart } from "react-icons/bi";
 import classes from "./Header.module.css";
 import { SlLocationPin } from "react-icons/sl";
 import { BsSearch } from "react-icons/bs";
 import LowerHeader from "./LowerHeader";
+import { DataContext } from "../Context/DataProvider";
 
 
 const Header = () => {
+  const [state, dispatch] = useContext(DataContext);
+  console.log(state);
+
+  
   return (
     <>
       <section>

@@ -15,7 +15,7 @@ function Router() {
     "pk_test_51McqldCc8l9xEds4LgIJ8HREUw626RN9Q2Z3UYW3OhmbllGSP3sNrxUIMNLJY4nBH4122UeWNudnvoDxYBgvjkHH00hKsB4V39"
   );
   return (
-    <BrowserRouter>
+    // <BrowserRouter>
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/auth" element={<Auth />} />
@@ -47,7 +47,7 @@ function Router() {
           }
         />
       </Routes>
-    </BrowserRouter>
+    // </BrowserRouter>
   );
 }
 

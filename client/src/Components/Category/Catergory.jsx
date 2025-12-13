@@ -6,7 +6,7 @@ function Category() {
   return (
     <section className={classes.category__container}>
       {categoryInfos?.map((data, index) => {
-        console.log(data);
+        // console.log(data);
         
         return <CategoryCard key={index} info={data} />;
       })}
