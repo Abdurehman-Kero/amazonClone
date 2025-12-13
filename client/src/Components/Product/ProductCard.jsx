@@ -4,15 +4,19 @@ import Rating from "@mui/material/Rating";
 import { DataContext } from "../Context/DataProvider";
 import { Link } from "react-router-dom";
 import CurrencyFormatter from "../CurrencyFormatter";
+import { Type } from "../../utils/action.type";
 
 function ProductCard({ product, flex, renderDesc }) {
   const { image, title, rating, price, id, description } = product;
 // console.log(description);
   const [state, dispatch] = useContext(DataContext);
-
   const addToCart = () => {
-    dispatch({ type: "ADD_TO_BASKET", item: product });
+    dispatch({
+      type:  Type.ADD_TO_BASKET,
+      item: { image, title, rating, price, id, description },
+    });
   };
+  console.log(state);
 
   // console.log(state.basket);
 

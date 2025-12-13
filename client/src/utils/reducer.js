@@ -1,3 +1,5 @@
+import {Type} from "./action.type";
+
 export const initialState = {
   basket: [],
   user: null,
