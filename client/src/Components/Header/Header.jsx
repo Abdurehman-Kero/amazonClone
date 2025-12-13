@@ -8,8 +8,8 @@ import { DataContext } from "../Context/DataProvider";
 
 
 const Header = () => {
-  const [state, dispatch] = useContext(DataContext);
-  console.log(state);
+  const [{basket}, dispatch] = useContext(DataContext);
+  // console.log(basket.length);
 
   
   return (
@@ -67,7 +67,7 @@ const Header = () => {
           {/* cart */}
           <a href="" className={classes.cart}>
             <BiCart size ={35}/>
-            <span>0</span>
+            <span>{basket.length}</span>
           </a>
         </div>
         </div>
