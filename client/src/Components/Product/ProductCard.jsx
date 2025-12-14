@@ -6,11 +6,11 @@ import { Link } from "react-router-dom";
 import CurrencyFormatter from "../CurrencyFormatter";
 import { Type } from "../../utils/action.type";
 
-function ProductCard({ product, flex, renderDesc }) {
+function ProductCard({ product, flex, renderDesc, renderAdd }) {
   const { image, title, rating, price, id, description } = product;
 // console.log(description);
   const [state, dispatch] = useContext(DataContext);
-  console.log(state);
+  // console.log(state);
   const addToCart = () => {
     dispatch({
       type:  Type.ADD_TO_BASKET,
@@ -35,7 +35,7 @@ function ProductCard({ product, flex, renderDesc }) {
         <h3>{title}</h3>
 
         {renderDesc && <div style={{ maxWidth: "700px" }}>{description}</div>}
-        
+
         <div className={classes.rating}>
           <Rating value={rating?.rate} precision={0.1} />
           <small>{rating?.count}</small>
@@ -44,10 +44,11 @@ function ProductCard({ product, flex, renderDesc }) {
         <div>
           <CurrencyFormatter amount={price} />
         </div>
-
-        <button className={classes.button} onClick={addToCart}>
-          add to cart
-        </button>
+        {renderAdd && (
+          <button className={classes.button} onClick={addToCart}>
+            add to cart
+          </button>
+        )}
       </div>
     </div>
   );

@@ -3,13 +3,18 @@ import { BiCart } from "react-icons/bi";
 import classes from "./Header.module.css";
 import { SlLocationPin } from "react-icons/sl";
 import { BsSearch } from "react-icons/bs";
-import LowerHeader from "./LowerHeader";
+import LowerHeader from "./LowerHeader"; 
 import { DataContext } from "../Context/DataProvider";
+import Cart from "../../Pages/Cart/Cart";
+import { Link } from "react-router-dom";
 
 
 const Header = () => {
-  const [{basket}, dispatch] = useContext(DataContext);
-  // console.log(basket.length);
+    const [{ basket, user }, dispatch] = useContext(DataContext);
+    const totalItem = basket?.reduce((accumulator, item) => {
+      return item.quantity + accumulator;
+    }, 0);
+
 
   
   return (
@@ -66,10 +71,10 @@ const Header = () => {
                 <span>$ Orders</span>
               </a>
               {/* cart */}
-              <a href="" className={classes.cart}>
+              <Link to="/cart" className={classes.cart}>
                 <BiCart size={35} />
-                <span>{basket.length}</span>
-              </a>
+                <span>{totalItem}</span>
+              </Link>
             </div>
           </div>
         </section>

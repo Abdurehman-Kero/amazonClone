@@ -26,7 +26,7 @@ function ProductDetail() {
   console.log(product);
   return (
     <Layout>
-      {isLoading? (<Loader/>):  <ProductCard product={product} flex renderDesc />
+      {isLoading? (<Loader/>):  <ProductCard product={product} flex renderDesc renderAdd={true} />
 }
     </Layout>
   );
