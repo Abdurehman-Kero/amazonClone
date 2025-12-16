@@ -8,12 +8,10 @@ import DataProvider from "./Components/Context/DataProvider.jsx";
 import { initialState, reducer } from "./utils/reducer.js";
 
 
-createRoot(document.getElementById("root")).render( 
-<BrowserRouter>
-    <DataProvider reducer = {reducer} initialState = {initialState} > 
-
-        <App /> 
-      
-    </DataProvider> 
-    </BrowserRouter>
+createRoot(document.getElementById("root")).render(
+  <BrowserRouter basename="/amazon-Clone-2025">
+    <DataProvider reducer={reducer} initialState={initialState}>
+      <App />
+    </DataProvider>
+  </BrowserRouter>
 );
