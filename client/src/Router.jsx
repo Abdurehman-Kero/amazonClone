@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Landing from "./pages/Landing/Landing";
 import Cart from "./pages/Cart/Cart";
 import Result from "./Pages/Results/Resulst";
-import Auth from "./Pages/Auth/SignUp";
+import Auth from "./Pages/Auth/Auth";
 import ProductDetail from "./Pages/productDetail/ProductDetails";
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
