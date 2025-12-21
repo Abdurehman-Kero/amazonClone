@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Landing from "./pages/Landing/Landing";
-import Cart from "./pages/Cart/Cart";
+import Cart from "./pages/Cart/Cart.jsx";
 import Result from "./Pages/Results/Resulst";
 import Auth from "./Pages/Auth/Auth";
 import ProductDetail from "./Pages/productDetail/ProductDetails";
@@ -12,7 +12,7 @@ import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
 
 function Router() {
   const stripePromise = loadStripe(
-    "pk_test_51McqldCc8l9xEds4LgIJ8HREUw626RN9Q2Z3UYW3OhmbllGSP3sNrxUIMNLJY4nBH4122UeWNudnvoDxYBgvjkHH00hKsB4V39"
+    "pk_test_51SgjFjAQqF9qnQefrGbeZCbW4snsDAdqJI8EMyIWF2QnO8YBCUDfsKLSKGcgglHEfyP0CLcNjRzm5dPGUoYympxt009Gfm6sw5"
   );
   return (
     // <BrowserRouter>
