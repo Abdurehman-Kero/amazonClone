@@ -1,8 +1,8 @@
 import React,{useContext,useState, useEffect} from 'react'
 import Layout from '../../Layout/Layout'
 import { db } from '../../utils/firebase'
-import { DataContext } from '../../components/Context/DataProvider'
-import ProductCard from '../../components/Product/ProductCard'
+import { DataContext } from '../../Components/Context/DataProvider'
+import ProductCard from '../../Components/Product/ProductCard'
 import classes from "./Orders.module.css"
 const Orders = () => {
    const [{ user }, dispatch] = useContext(DataContext);
