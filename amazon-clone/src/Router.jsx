@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Landing from "./pages/Landing/Landing";
+import Landing from "./pages/Landing/Landing.jsx";
+
 import Cart from "./pages/Cart/Cart.jsx";
 import Result from "./Pages/Results/Resulst";
 import Auth from "./Pages/Auth/Auth";
